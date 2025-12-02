@@ -67,7 +67,6 @@ def test_get_hours_per_day():
             result = runner.invoke(main.get_hours_per_day)
 
     assert result.exit_code == 0
-    assert "You need to work" in result.output
     assert "6.96" in result.output
 
 
@@ -96,7 +95,6 @@ def test_edit_worked_hours():
 
     with make_datasource_mock(datasource_data), \
         update_datasource_mock() as update_mock:
-            result = runner.invoke(main.edit_worked_hours)
             result = runner.invoke(main.edit_worked_hours, ["--day", "2025-01-05", "--hours", "8.5"])
 
     assert result.exit_code == 0

@@ -1,1 +1,1 @@
-pytest -q
+pytest -vv --tb=short

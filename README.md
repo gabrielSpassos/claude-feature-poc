@@ -22,7 +22,7 @@
 
 3. 
 ```
-1. Add a new @click.command named as "backfill-worked-hours". This comman should access url $repliconUrl where the date is on format yyyy-MM-dd and should access twice the system based on current month, first with the data was yyyy-MM-15 and then yyyy-MM-16. Inside the system will be a table, will exist a row labled with "Total Hours" and for each day backfill the "worked_hours" with the value from the UI.
+1. Add a new @click.command named as "backfill-worked-hours". This command should access url from the .variable `timesheet_url` where the date is on format yyyy-MM-dd and should access twice the system based on current month, first with the data was yyyy-MM-15 and then yyyy-MM-16. Inside the system will be a table, will exist a row labled with "Total Hours" and for each day backfill the "worked_hours" with the value from the UI.
 2. Do this fast
 3. Not run tests
 ```

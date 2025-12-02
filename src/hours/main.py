@@ -2,6 +2,7 @@ import calendar
 from datetime import date
 import click
 import hours.datasource as datasource
+from dotenv import load_dotenv
 
 LOGO = click.style(r"""
 ██╗  ██╗ ██████╗ ██╗   ██╗██████╗ ███████╗
@@ -12,6 +13,11 @@ LOGO = click.style(r"""
 ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝
 """, fg="bright_cyan")
 
+
+load_dotenv()
+
+
+timesheet_url = os.getenv("TIMESHEET_URL")
 
 @click.group(invoke_without_command=True)
 @click.pass_context

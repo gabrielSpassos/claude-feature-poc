@@ -97,7 +97,7 @@ def test_edit_worked_hours():
     with make_datasource_mock(datasource_data), \
         update_datasource_mock() as update_mock:
             result = runner.invoke(main.edit_worked_hours)
-            result = runner.invoke(main.edit_worked_hours, ["--date", "2025-01-05", "--hours", "8.5"])
+            result = runner.invoke(main.edit_worked_hours, ["--day", "2025-01-05", "--hours", "8.5"])
 
     assert result.exit_code == 0
     assert "2025-01-05" in result.output
